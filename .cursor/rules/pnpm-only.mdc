@@ -1,0 +1,21 @@
+---
+description: Enforce pnpm usage instead of npm
+alwaysApply: true
+---
+
+# Package Manager: pnpm Only
+
+- Use `pnpm` for all package management commands in this repository.
+- Do not use `npm` commands for install, run, create, publish, or scripts.
+- Prefer `pnpm dlx` instead of `npx`.
+- Prefer `pnpm add`, `pnpm add -D`, `pnpm remove`, and `pnpm install`.
+- Prefer `pnpm run <script>` (or `pnpm <script>` where appropriate).
+
+## Command Mapping
+
+- `npm install` -> `pnpm install`
+- `npm i <pkg>` -> `pnpm add <pkg>`
+- `npm i -D <pkg>` -> `pnpm add -D <pkg>`
+- `npm uninstall <pkg>` -> `pnpm remove <pkg>`
+- `npm run <script>` -> `pnpm run <script>`
+- `npx <tool>` -> `pnpm dlx <tool>`
